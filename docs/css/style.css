@@ -1,19 +1,38 @@
+/* Layout für jedes Projekt */
 .project {
-    display: flex;                  /* Flexbox für nebeneinander Anordnung */
-    align-items: flex-start;        /* Text und Bild oben ausrichten */
-    gap: 20px;                      /* Abstand zwischen Text und Bild */
-    margin-bottom: 30px;            /* Abstand nach unten */
+    display: flex;                      /* Flexbox für nebeneinander Anordnung */
+    align-items: center;                 /* Vertikale Ausrichtung von Text und Bild */
+    gap: 20px;                           /* Abstand zwischen Text und Bild */
+    margin-bottom: 30px;                 /* Abstand nach unten */
 }
 
+/* Textbereich */
 .text {
-    flex: 1;                        /* Text nimmt verfügbare Breite */
-    padding-right: 20px;            /* Zusätzlicher Abstand rechts */
+    flex: 1;                             /* Text nimmt den verfügbaren Raum ein */
+    padding-right: 20px;                 /* Zusätzlicher Abstand rechts zum Bild */
 }
 
+/* Bildbereich */
+.image {
+    flex-shrink: 0;                      /* Verhindert, dass das Bild schrumpft */
+}
+
+/* Alle Bilder gleich groß und immer rechts neben dem Text */
 .image img {
-    max-width: 300px;               /* Begrenze Bildbreite */
-    height: auto;                   /* Bild bleibt proportional */
-    display: block;                 /* Vermeidet ungewollte zusätzliche Abstände */
-    margin: 0;                      /* Entfernt Standardabstände */
-    padding-bottom: 10px;           /* Sicherer Abstand zur Unterseite */
+    width: 300px;                        /* Festgelegte Breite für alle Bilder */
+    height: auto;                        /* Automatische Höhe, um das Seitenverhältnis zu wahren */
+    display: block;                      /* Verhindert unerwünschte Abstände unter dem Bild */
+    margin-left: 20px;                   /* Abstand nach links zum Text */
+    border-radius: 8px;                  /* Optional: Ecken abrunden */
+}
+
+/* Link-Stile */
+a {
+    text-decoration: none;               /* Entfernt die Unterstreichung der Links */
+    color: #0066cc;                      /* Linkfarbe */
+}
+
+a:hover {
+    text-decoration: underline;          /* Unterstreichung beim Hover */
+    color: #003366;                      /* Dunklere Farbe beim Hover */
 }
